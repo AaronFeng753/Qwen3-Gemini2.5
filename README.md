@@ -7,7 +7,7 @@ Make Qwen3 Think like Gemini 2.5 Pro
 
 ---
 
-### CODE: https://github.com/AaronFeng753/Qwen3-Gemini2.5/blob/main/Qwen3-Gemini2.5.py
+CODE: https://github.com/AaronFeng753/Qwen3-Gemini2.5/blob/main/Qwen3-Gemini2.5.py
 
 ---
 
