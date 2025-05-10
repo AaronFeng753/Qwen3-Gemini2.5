@@ -10,6 +10,8 @@ from pydantic import BaseModel, Field
 from typing import Optional
 import re
 
+Gemini2_5_str = f"""My step by step thinking process went something like this:
+1. **"""
 
 class Filter:
     class Valves(BaseModel):
@@ -62,7 +64,7 @@ class Filter:
 
         assistant_message = {
             "role": "assistant",
-            "content": "<think>\nMy step by step thinking process went something like this:\n1. ",
+            "content": "<think>\n"+Gemini2_5_str,
         }
         body["messages"].append(assistant_message)
 
@@ -80,7 +82,7 @@ class Filter:
         model_response = messages[-1].get("content", "")
 
         model_response = (
-            f"<details>\n<summary>Thoughts 💭</summary>\nMy step by step thinking process went something like this:\n1. "
+            f"<details>\n<summary>Thoughts 💭</summary>\n"+Gemini2_5_str
             + model_response
         )
 
